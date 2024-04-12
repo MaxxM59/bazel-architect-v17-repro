@@ -1,0 +1,19 @@
+WARNING: Ignoring JAVA_HOME, because it must point to a JDK, not a JRE.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:serve (0 packages loaded, 0 targets configured)
+Analyzing: target //:serve (0 packages loaded, 0 targets configured)
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+INFO: Analyzed target //:serve (0 packages loaded, 0 targets configured).
+[2 / 5] Architect projects/common/dist; 1s linux-sandbox
+[3 / 5] Architect projects/lib-a/dist; 1s linux-sandbox
+INFO: Found 1 target...
+Target //:serve up-to-date:
+  bazel-bin/serve.sh
+INFO: Elapsed time: 4.673s, Critical Path: 4.55s
+INFO: 4 processes: 1 internal, 2 linux-sandbox, 1 local.
+INFO: Build completed successfully, 4 total actions
+INFO: Running command line: bazel-bin/serve.sh angular:serve
+c[1B[1A[1G[1B[1G[1A[1G[1B[1G- Building...
+

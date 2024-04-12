@@ -1,0 +1,91 @@
+WARNING: Ignoring JAVA_HOME, because it must point to a JDK, not a JRE.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:test (0 packages loaded, 0 targets configured)
+Analyzing: target //:test (0 packages loaded, 0 targets configured)
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+INFO: Analyzed target //:test (0 packages loaded, 0 targets configured).
+[2 / 3] Testing //:test; 1s linux-sandbox
+FAIL: //:test (see /home/maxime/.cache/bazel/_bazel_maxime/33453c1f71a380f9219f0d38d014cde7/execroot/_main/bazel-out/k8-fastbuild/testlogs/test/test.log)
+INFO: From Testing //:test:
+==================== Test output for //:test:
+DEBUG: aspect_rules_js[js_test]: PATH /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/test_node_bin:.:/bin:/usr/bin:/usr/local/bin
+DEBUG: aspect_rules_js[js_test]: JS_BINARY__FS_PATCH_ROOTS /tmp/bazel-working-directory/_main:/tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles
+DEBUG: aspect_rules_js[js_test]: JS_BINARY__NODE_PATCHES /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/../aspect_rules_js/js/private/node-patches/register.js
+DEBUG: aspect_rules_js[js_test]: JS_BINARY__NODE_OPTIONS --preserve-symlinks-main
+DEBUG: aspect_rules_js[js_test]: JS_BINARY__BINDIR bazel-out/k8-fastbuild/bin
+DEBUG: aspect_rules_js[js_test]: JS_BINARY__BUILD_FILE_PATH BUILD.bazel
+DEBUG: aspect_rules_js[js_test]: JS_BINARY__COMPILATION_MODE fastbuild
+DEBUG: aspect_rules_js[js_test]: JS_BINARY__NODE_BINARY /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/../nodejs_linux_amd64/bin/nodejs/bin/node
+DEBUG: aspect_rules_js[js_test]: JS_BINARY__NODE_WRAPPER /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/test_node_bin/node
+DEBUG: aspect_rules_js[js_test]: JS_BINARY__PACKAGE
+DEBUG: aspect_rules_js[js_test]: JS_BINARY__TARGET_CPU k8
+DEBUG: aspect_rules_js[js_test]: JS_BINARY__TARGET_NAME test
+DEBUG: aspect_rules_js[js_test]: JS_BINARY__WORKSPACE _main
+DEBUG: aspect_rules_js[js_test]: js_binary entry point /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/node_modules/.aspect_rules_js/@angular-devkit+architect-cli@0.1703.4/node_modules/@angular-devkit/architect-cli/./bin/architect.js
+INFO: aspect_rules_js[js_test]: JS_BINARY__TARGET //:test
+INFO: aspect_rules_js[js_test]: JS_BINARY__RUNFILES /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles
+INFO: aspect_rules_js[js_test]: JS_BINARY__EXECROOT /tmp/bazel-working-directory/_main
+INFO: aspect_rules_js[js_test]: PWD /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main
+INFO: aspect_rules_js[js_test]: running /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/test_node_bin/node --preserve-symlinks-main -- /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/node_modules/.aspect_rules_js/@angular-devkit+architect-cli@0.1703.4/node_modules/@angular-devkit/architect-cli/./bin/architect.js angular:test
+DEBUG: aspect_rules_js[js_test]: overriding process.execPath to node wrapper path /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/test_node_bin/node
+DEBUG: aspect_rules_js[js_test]: node fs patches will be applied with roots: /tmp/bazel-working-directory/_main,/tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles
+c- Building...
+
+DEBUG: aspect_rules_js[js_test]: overriding process.execPath to node wrapper path /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/test_node_bin/node
+DEBUG: aspect_rules_js[js_test]: node fs patches will be applied with roots: /tmp/bazel-working-directory/_main,/tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles
+DEBUG: aspect_rules_js[js_test]: overriding process.execPath to node wrapper path /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/test_node_bin/node
+DEBUG: aspect_rules_js[js_test]: overriding process.execPath to node wrapper path /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/test_node_bin/node
+DEBUG: aspect_rules_js[js_test]: node fs patches will be applied with roots: /tmp/bazel-working-directory/_main,/tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles
+DEBUG: aspect_rules_js[js_test]: node fs patches will be applied with roots: /tmp/bazel-working-directory/_main,/tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles
+DEBUG: aspect_rules_js[js_test]: overriding process.execPath to node wrapper path /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/test_node_bin/node
+DEBUG: aspect_rules_js[js_test]: overriding process.execPath to node wrapper path /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/test_node_bin/node
+DEBUG: aspect_rules_js[js_test]: node fs patches will be applied with roots: /tmp/bazel-working-directory/_main,/tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles
+DEBUG: aspect_rules_js[js_test]: node fs patches will be applied with roots: /tmp/bazel-working-directory/_main,/tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles
+DEBUG: aspect_rules_js[js_test]: overriding process.execPath to node wrapper path /tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/test_node_bin/node
+DEBUG: aspect_rules_js[js_test]: node fs patches will be applied with roots: /tmp/bazel-working-directory/_main,/tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles
+● Validation Error:
+
+  Directory dist/test-out/browser in the rootDir option was not found.
+
+  Configuration Documentation:
+  https://jestjs.io/docs/configuration
+
+FAILURE
+Result: {
+    "success": false,
+    "target": {
+        "project": "angular",
+        "target": "test"
+    }
+}
+
+Logs:
+angular:test: NOTE: The Jest builder is currently EXPERIMENTAL and not ready for production use.
+angular:test: Application bundle generation failed. [0.612 seconds]
+
+angular:test: ▲ [WARNING] TypeScript compiler options 'target' and 'useDefineForClassFields' are set to 'ES2022' and 'false' respectively by the Angular CLI. [plugin angular-compiler]
+
+    tsconfig.spec.json:0:0:
+      0 │ 
+        ╵ ^
+
+  To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.io/guide/build#configuring-browser-compatibility
+
+
+angular:test: ✘ [ERROR] TS18003: No inputs were found in config file '/tmp/bazel-working-directory/_main/bazel-out/k8-fastbuild/bin/test.sh.runfiles/_main/tsconfig.spec.json'. Specified 'include' paths were '["dist/test-out/browser/**/*.spec.ts","dist/test-out/browser/**/*.d.ts"]' and 'exclude' paths were '["bazel-*"]'. [plugin angular-compiler]
+
+
+DEBUG: aspect_rules_js[js_test]: exit code: 1
+================================================================================
+INFO: Found 1 test target...
+Target //:test up-to-date:
+  bazel-bin/test.sh
+INFO: Elapsed time: 1.402s, Critical Path: 1.29s
+INFO: 3 processes: 2 linux-sandbox, 1 local.
+INFO: Build completed, 1 test FAILED, 3 total actions
+//:test                                                                  FAILED in 1.1s
+  /home/maxime/.cache/bazel/_bazel_maxime/33453c1f71a380f9219f0d38d014cde7/execroot/_main/bazel-out/k8-fastbuild/testlogs/test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

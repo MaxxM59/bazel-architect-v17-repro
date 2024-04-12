@@ -1,0 +1,46 @@
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "aspect_rules_js",
+    sha256 = "d6dddd224b27d456820d19b9c23a7bcbe75660a6c040d83e31ba3da4fb1f6888",
+    strip_prefix = "rules_js-1.41.0",
+    url = "https://github.com/aspect-build/rules_js/releases/download/v1.41.0/rules_js-v1.41.0.tar.gz",
+)
+
+load("@aspect_rules_js//js:repositories.bzl", "rules_js_dependencies")
+
+rules_js_dependencies()
+
+load("@aspect_bazel_lib//lib:repositories.bzl", "aspect_bazel_lib_dependencies", "register_jq_toolchains")
+
+aspect_bazel_lib_dependencies()
+
+register_jq_toolchains()
+
+load("@rules_nodejs//nodejs:repositories.bzl", "DEFAULT_NODE_VERSION", "nodejs_register_toolchains")
+
+nodejs_register_toolchains(
+    name = "nodejs",
+    node_version = DEFAULT_NODE_VERSION,
+)
+
+load("@aspect_rules_js//npm:npm_import.bzl", "npm_translate_lock")
+
+npm_translate_lock(
+    name = "npm",
+    bins = {
+        "@angular/compiler-cli": {
+            "ngcc": "./bundles/ngcc/main-ngcc.js",
+        },
+    },
+    custom_postinstalls = {
+        "ng2-dragula": "ngcc --source .",
+    },
+    pnpm_lock = "//:pnpm-lock.yaml",
+    npmrc = "//:.npmrc",
+    verify_node_modules_ignored = "//:.bazelignore",
+)
+
+load("@npm//:repositories.bzl", "npm_repositories")
+
+npm_repositories()
