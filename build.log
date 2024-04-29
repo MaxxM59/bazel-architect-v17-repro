@@ -1,38 +1,37 @@
 WARNING: Ignoring JAVA_HOME, because it must point to a JDK, not a JRE.
-Starting local Bazel server and connecting to it...
-Computing main repo mapping: 
 Computing main repo mapping: 
 Loading: 
 Loading: 0 packages loaded
-Analyzing: target //:app (1 packages loaded, 0 targets configured)
-Analyzing: target //:app (1 packages loaded, 0 targets configured)
-[0 / 1] checking cached actions
-Analyzing: target //:app (149 packages loaded, 2232 targets configured)
-[1 / 1] checking cached actions
-Analyzing: target //:app (499 packages loaded, 3321 targets configured)
-[1 / 1] checking cached actions
-Analyzing: target //:app (712 packages loaded, 3958 targets configured)
-[1 / 1] checking cached actions
-INFO: Analyzed target //:app (1146 packages loaded, 8211 targets configured).
-[430 / 3,254] Extracting npm package rxjs@7.8.1 [for tool]; 0s linux-sandbox ... (18 actions, 16 running)
-[3,916 / 4,241] Extracting npm package jsonfile@4.0.0; 0s linux-sandbox ... (18 actions, 17 running)
-[4,185 / 4,241] Running lifecycle hooks on npm package @esbuild/android-arm64@0.19.12; 0s local ... (19 actions, 16 running)
-[4,238 / 4,241] Architect projects/common/dist; 1s linux-sandbox
-[4,239 / 4,241] [Prepa] Architect projects/lib-a/dist
-[4,239 / 4,241] Architect projects/lib-a/dist; 1s linux-sandbox
-[4,240 / 4,241] [Prepa] Architect dist/angular
-[4,240 / 4,241] Architect dist/angular; 1s linux-sandbox
+Analyzing: target //:app (0 packages loaded, 0 targets configured)
+Analyzing: target //:app (0 packages loaded, 0 targets configured)
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+INFO: Analyzed target //:app (0 packages loaded, 0 targets configured).
+[2 / 5] Architect projects/common/dist; 1s linux-sandbox
+[3 / 5] Architect projects/lib-a/dist; 0s linux-sandbox
+[4 / 5] [Prepa] Architect dist/angular
+[4 / 5] Architect dist/angular; 1s linux-sandbox
 ERROR: /home/maxime/Bureau/bazel-architect-v17-repro/BUILD.bazel:10:7: Architect dist/angular failed: (Exit 1): app__js_binary.sh failed: error executing Architect command (from target //:app) bazel-out/k8-opt-exec-ST-13d3ddad9198/bin/app__js_binary.sh angular:build
 
 Use --sandbox_debug to see verbose messages from the sandbox and retain the sandbox build root for debugging
 - Building...
 
-angular:build: ✘ [ERROR] Error: The "path" argument must be of type string. Received undefined
+angular:build: ✘ [ERROR] File '../../../../../bazel-execroot/_main/bazel-out/k8-fastbuild/bin/src/main.ts' is missing from the TypeScript compilation. [plugin angular-compiler]
+
+  Ensure the file is part of the TypeScript program via the 'files' or 'include' property.
+
+
+✘ [ERROR] Error: The "path" argument must be of type string. Received undefined
   ╷
-1 │ @use '@angular/material' as mat;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4 │ @use '@material/typography' as mdc-typography;
+  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   ╵
-  src/styles.scss 1:1  root stylesheet [plugin angular-sass]
+  /tmp/bazel-execroot/_main/bazel-out/k8-fastbuild/bin/node_modules/.aspect_rules_js/@angular+material@17.3.4_-1684311706/node_modules/@angular/material/core/typography/_definition.scss 4:1  @use
+  /tmp/bazel-execroot/_main/bazel-out/k8-fastbuild/bin/node_modules/.aspect_rules_js/@angular+material@17.3.4_-1684311706/node_modules/@angular/material/core/typography/_versioning.scss 2:1  @use
+  /tmp/bazel-execroot/_main/bazel-out/k8-fastbuild/bin/node_modules/.aspect_rules_js/@angular+material@17.3.4_-1684311706/node_modules/@angular/material/core/theming/_m2-inspection.scss 6:1  @use
+  /tmp/bazel-execroot/_main/bazel-out/k8-fastbuild/bin/node_modules/.aspect_rules_js/@angular+material@17.3.4_-1684311706/node_modules/@angular/material/core/theming/_inspection.scss 4:1     @use
+  /tmp/bazel-execroot/_main/bazel-out/k8-fastbuild/bin/node_modules/.aspect_rules_js/@angular+material@17.3.4_-1684311706/node_modules/@angular/material/core/typography/_typography.scss 5:1  @forward
+  @angular/_index.scss 13:1                                                                                                                                                                    @use
+  /tmp/bazel-execroot/_main/bazel-out/k8-fastbuild/bin/src/styles.scss 1:1                                                                                                                     root stylesheet [plugin angular-sass]
 
     angular:styles/global:styles:1:8:
       1 │ @import 'src/styles.scss';
@@ -49,11 +48,11 @@ Result: {
 }
 
 Logs:
-angular:build: Application bundle generation failed. [3.442 seconds]
+angular:build: Application bundle generation failed. [1.913 seconds]
 
 INFO: Found 1 target...
 Target //:app failed to build
 Use --verbose_failures to see the command lines of failed build steps.
-INFO: Elapsed time: 19.418s, Critical Path: 9.98s
-INFO: 3782 processes: 2656 internal, 985 linux-sandbox, 141 local.
+INFO: Elapsed time: 7.741s, Critical Path: 7.56s
+INFO: 5 processes: 2 internal, 2 linux-sandbox, 1 local.
 ERROR: Build did NOT complete successfully

@@ -1,6 +1,8 @@
 # Purpose
 
-Attempt to make use of the [Aspect architect example](https://github.com/aspect-build/bazel-examples/tree/main/angular) with v17 dependencies
+Repro that architect fails on 17.3.X
+
+[Working 17.0.1 version](https://github.com/MaxxM59/bazel-architect-v17-repro-17.0)
 
 # Changes
 
