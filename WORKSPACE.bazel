@@ -25,7 +25,7 @@ nodejs_register_toolchains(
 )
 
 load("@aspect_rules_js//npm:npm_import.bzl", "npm_translate_lock")
-
+load("//:sass.bzl", "SASS_DEPS")
 npm_translate_lock(
     name = "npm",
     bins = {
@@ -33,9 +33,7 @@ npm_translate_lock(
             "ngcc": "./bundles/ngcc/main-ngcc.js",
         },
     },
-    custom_postinstalls = {
-        "ng2-dragula": "ngcc --source .",
-    },
+    public_hoist_packages = {p: ["src"] for p in SASS_DEPS},
     pnpm_lock = "//:pnpm-lock.yaml",
     npmrc = "//:.npmrc",
     verify_node_modules_ignored = "//:.bazelignore",

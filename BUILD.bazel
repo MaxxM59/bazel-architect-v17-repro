@@ -11,7 +11,6 @@ ng_app(
     name = "app",
     project_name = "angular",
     deps = [
-        "//:node_modules/ng2-dragula",
         "//projects/lib-a",
     ],
 )
