@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <strong> The library component! With <lib-common></lib-common> </strong>
   `,
+  standalone: false,
   styleUrls: ['./lib-a.component.css'],
 })
 export class LibAComponent {}

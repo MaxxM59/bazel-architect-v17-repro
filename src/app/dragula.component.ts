@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'dragula',
+  standalone:false,
   template: `
     <div>
       <div class="wrapper">

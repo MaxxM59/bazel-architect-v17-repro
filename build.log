@@ -4,55 +4,12 @@ Loading:
 Loading: 0 packages loaded
 Analyzing: target //:app (0 packages loaded, 0 targets configured)
 Analyzing: target //:app (0 packages loaded, 0 targets configured)
-[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
-INFO: Analyzed target //:app (0 packages loaded, 0 targets configured).
-[2 / 5] Architect projects/common/dist; 1s linux-sandbox
-[3 / 5] Architect projects/lib-a/dist; 0s linux-sandbox
-[4 / 5] [Prepa] Architect dist/angular
-[4 / 5] Architect dist/angular; 1s linux-sandbox
-ERROR: /home/maxime/Bureau/bazel-architect-v17-repro/BUILD.bazel:10:7: Architect dist/angular failed: (Exit 1): app__js_binary.sh failed: error executing Architect command (from target //:app) bazel-out/k8-opt-exec-ST-13d3ddad9198/bin/app__js_binary.sh angular:build
 
-Use --sandbox_debug to see verbose messages from the sandbox and retain the sandbox build root for debugging
-- Building...
-
-angular:build: ✘ [ERROR] File '../../../../../bazel-execroot/_main/bazel-out/k8-fastbuild/bin/src/main.ts' is missing from the TypeScript compilation. [plugin angular-compiler]
-
-  Ensure the file is part of the TypeScript program via the 'files' or 'include' property.
-
-
-✘ [ERROR] Error: The "path" argument must be of type string. Received undefined
-  ╷
-4 │ @use '@material/typography' as mdc-typography;
-  │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-  /tmp/bazel-execroot/_main/bazel-out/k8-fastbuild/bin/node_modules/.aspect_rules_js/@angular+material@17.3.4_-1684311706/node_modules/@angular/material/core/typography/_definition.scss 4:1  @use
-  /tmp/bazel-execroot/_main/bazel-out/k8-fastbuild/bin/node_modules/.aspect_rules_js/@angular+material@17.3.4_-1684311706/node_modules/@angular/material/core/typography/_versioning.scss 2:1  @use
-  /tmp/bazel-execroot/_main/bazel-out/k8-fastbuild/bin/node_modules/.aspect_rules_js/@angular+material@17.3.4_-1684311706/node_modules/@angular/material/core/theming/_m2-inspection.scss 6:1  @use
-  /tmp/bazel-execroot/_main/bazel-out/k8-fastbuild/bin/node_modules/.aspect_rules_js/@angular+material@17.3.4_-1684311706/node_modules/@angular/material/core/theming/_inspection.scss 4:1     @use
-  /tmp/bazel-execroot/_main/bazel-out/k8-fastbuild/bin/node_modules/.aspect_rules_js/@angular+material@17.3.4_-1684311706/node_modules/@angular/material/core/typography/_typography.scss 5:1  @forward
-  @angular/_index.scss 13:1                                                                                                                                                                    @use
-  /tmp/bazel-execroot/_main/bazel-out/k8-fastbuild/bin/src/styles.scss 1:1                                                                                                                     root stylesheet [plugin angular-sass]
-
-    angular:styles/global:styles:1:8:
-      1 │ @import 'src/styles.scss';
-        ╵         ~~~~~~~~~~~~~~~~~
-
-
-cFAILURE
-Result: {
-    "success": false,
-    "target": {
-        "project": "angular",
-        "target": "build"
-    }
-}
-
-Logs:
-angular:build: Application bundle generation failed. [1.913 seconds]
-
+INFO: Analyzed target //:app (0 packages loaded, 9 targets configured).
+[3,684 / 3,685] Architect dist/angular; 0s linux-sandbox
 INFO: Found 1 target...
-Target //:app failed to build
-Use --verbose_failures to see the command lines of failed build steps.
-INFO: Elapsed time: 7.741s, Critical Path: 7.56s
-INFO: 5 processes: 2 internal, 2 linux-sandbox, 1 local.
-ERROR: Build did NOT complete successfully
+Target //:app up-to-date:
+  bazel-bin/dist/angular
+INFO: Elapsed time: 7.499s, Critical Path: 6.26s
+INFO: 9 processes: 8 internal, 1 linux-sandbox.
+INFO: Build completed successfully, 9 total actions
